@@ -1,1 +1,33 @@
+int s = 71;
+//int d = 0;
 
+void quadrate() {
+  fill(0);
+  for (int x = 0; x < (500/s); x ++) {
+    for(int i = 0; i < (500/s); i++) {
+    square(7+i*s, 7+x*s, s - 14);
+    }
+  }
+}
+
+void punkte() {
+  fill(255);
+  stroke(140);
+  for (int x = 0; x < (489/s); x ++) {
+    for(int i = 0; i < (489/s); i++) {
+    circle(71+x*s, 71+i*s, 14);
+    }
+  }
+  
+}
+  
+
+  
+  
+void setup() {
+  size(500, 500);
+  background(100, 192, 255);
+  quadrate();
+  punkte();
+
+}

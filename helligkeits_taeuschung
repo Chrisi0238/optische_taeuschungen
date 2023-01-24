@@ -1,0 +1,18 @@
+}
+
+void setup() {
+  size(220, 110); //set window size
+  background(255); //set background color 
+  stroke(170); //set stroke color for next object 
+  fill(170); //set fill color for next object 
+  square(45, 45, 25); //draw square (left upper corner x= 45, y= 45, side lenght = 20)
+  fill(0); //set color for right side (black)
+  square(110, 0, 110); //set square coordindates (x= 110, y= 0, side leght = 110 =half window -> left)
+  fill(100); //set color for right rectangle 
+  stroke(100); //set edge color 
+  rect(154, 10, 25, 90); //draw right rectangle 
+  fill(170); //set fill color for right square 
+  stroke(170); //set stroke color for edge of right square
+  square(154, 46, 25); //drwa right square
+  
+}  

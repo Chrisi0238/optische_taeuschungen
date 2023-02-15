@@ -1,0 +1,58 @@
+int width = 400; //Grün RGB(21, 174, 56)
+int height = 640; //weiss RGB (255)
+int d = 5;
+int s =45;
+int weiss = 255;
+int gruen = #1CAF38;
+
+void zeichneQuadrate(int x, int y, int farbe){
+  fill(farbe); //Farbe einstellen (vom dünnen Rand des Quadrats)
+  noStroke(); 
+  square(x, y, s); //zeichnen des ersten Quadrats
+  
+  //Festlegen der Farbe für das innere Quadrat (weiß/grün)
+  if (farbe == weiss) {
+    fill(gruen);
+  }else {
+    fill(weiss);
+  }
+  square(x+d, y+d, s-2*d); //Zeichnen des inneren Quadrats
+}
+
+void zeichneReihe() {
+  int farbe1= gruen;
+  int x_position= 0;
+  int y_pos= 0;
+ while(ypos > height) {
+   while(x_position > width) {
+     zeichneQuadrate(x_position, y_pos, farbe1);
+     farbe1 = farbwechsel(farbe1);
+     x_position =0;
+     y_pos = y_pos + s;
+     
+     
+   }
+ }
+}
+void setup() {
+  size(640, 400);
+  zeichneReihe();
+  
+  int farbwechsel(int farbe1) {
+    if (frabe1 == gruen) {
+      return weiss;
+    }else {
+       return gruen;
+  //background(); //braucht man nicht
+     }
+    
+  }
+}
+     
+     
+
+//  for (int i1 = 0; i1 <= 11; i1++) {
+//    for (int i2 = 0; i2 <=11; i2++) {
+//      
+//    }
+//  }
